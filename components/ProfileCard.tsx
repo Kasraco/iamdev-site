@@ -22,19 +22,17 @@ const ProfileCard = () => {
               />
             </div>
             <div>
-              <h2 className="text-2xl font-bold">Software Engineer</h2>
+              <h2 className="text-2xl font-bold">{siteMetadata.bodyTitle}</h2>
               <p className="text-zinc-600 dark:text-zinc-300">
-                Based in Ho Chi Minh, Viet Nam
+                {siteMetadata.subtitle}
               </p>
             </div>
           </div>
           <p className="mt-4 text-lg">
-            Architecture is key, software engineer by choice.
+            {siteMetadata.herotext}
           </p>
           <p className="mt-2 text-zinc-600 dark:text-zinc-300">
-            {"I've"} been crafting solutions for nearly one decade, working with
-            clients, from startups to enterprises, achieving experience across
-            various domains.
+            {siteMetadata.bodyDescription}
           </p>
         </CardContent>
       </Card>
