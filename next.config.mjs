@@ -1,10 +1,31 @@
-import createMDX from "@next/mdx";
+import createMDX from '@next/mdx'
 import remarkFrontmatter from "remark-frontmatter";
 import remarkMdxFrontmatter from "remark-mdx-frontmatter";
 
+const withMDX = createMDX({
+  // Add markdown plugins here, as desired
+  
+  options: {
+    rehypePlugins: [],
+    remarkPlugins: [remarkFrontmatter, remarkMdxFrontmatter],
+  },
+});
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // output: process.env.NODE_ENV == 'development' ? 'standalone' : 'export',
+  // لازم است MDX در پسوند صفحات فعال شود
+  pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
+
+  // Turbopack تنظیم پیش‌فرض
+  experimental: {
+    turbo: {
+      rules: {
+        // پشتیبانی از mdx برای Turbopack
+        '*.mdx': ['@mdx-js/loader'],
+      },
+    },
+  },
+
   distDir: process.env.NODE_ENV == "development" ? ".dev" : ".next",
   reactStrictMode: false,
   cleanDistDir: true,
@@ -23,13 +44,7 @@ const nextConfig = {
       },
     ],
   },
-};
 
-const withMDX = createMDX({
-  // Add markdown plugins here, as desired
-  options: {
-    remarkPlugins: [remarkFrontmatter, remarkMdxFrontmatter],
-  },
-});
+}
 
 export default withMDX(nextConfig);
