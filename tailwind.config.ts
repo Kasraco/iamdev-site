@@ -1,3 +1,4 @@
+import { Vazirmatn } from "next/font/google";
 import type { Config } from "tailwindcss";
 import { fontFamily } from "tailwindcss/defaultTheme";
 
@@ -23,8 +24,11 @@ const config: Config = {
         "13": "3.25rem",
         "14": "3.5rem",
       },
-      fontFamily: {
-        sans: ["var(--font-var)", ...fontFamily.sans],
+      fontFamily: {        
+        Vazirmatn: ["Vazirmatn", ...fontFamily.sans],
+        shabnam: ["Shabnam", ...fontFamily.sans],
+        sans: ["Vazirmatn", ...fontFamily.sans],
+
       },
       colors: {
         background: "hsl(var(--background))",
@@ -72,12 +76,20 @@ const config: Config = {
         DEFAULT: {
           css: {
             a: {
+              fontFamily: theme("fontFamily.Vazirmatn").join(","),
+              fontWeight: theme("fontWeight.semibold"),
               color: theme("colors.primary.500"),
               "&:hover": {
                 color: `${theme("colors.primary.600")}`,
               },
               code: { color: theme("colors.primary.400") },
             },
+            
+            body: { fontFamily: theme("fontFamily.Vazirmatn").join(",") },
+            p: { fontFamily: theme("fontFamily.Vazirmatn").join(",") },
+            "h4,h5,h6": { fontFamily: theme("fontFamily.Vazirmatn").join(",") },
+            "h1,h2,h3": { fontFamily: theme("fontFamily.shabnam").join(",") },
+            
             "h1,h2": {
               fontWeight: "700",
               letterSpacing: theme("letterSpacing.tight"),
@@ -93,12 +105,18 @@ const config: Config = {
         invert: {
           css: {
             a: {
+              fontFamily: theme("fontFamily.Vazirmatn").join(","),
+              fontWeight: theme("fontWeight.semibold"),
               color: theme("colors.primary.500"),
               "&:hover": {
                 color: `${theme("colors.primary.400")}`,
               },
               code: { color: theme("colors.primary.400") },
             },
+            body: { fontFamily: theme("fontFamily.Vazirmatn").join(",") },
+            p: { fontFamily: theme("fontFamily.Vazirmatn").join(",") },
+            "h4,h5,h6": { fontFamily: theme("fontFamily.Vazirmatn").join(",") },
+            "h1,h2,h3": { fontFamily: theme("fontFamily.shabnam").join(",") },
             "h1,h2,h3,h4,h5,h6": {
               color: theme("colors.gray.100"),
             },
