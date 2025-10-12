@@ -5,11 +5,17 @@ const siteMetadata = {
   headerTitle: "IamDev",
   description:
     "مصطفی رسولی، برنامه‌نویس فول‌استک و طراح نرم‌افزار است که در زمینه‌ی ASP.NET Core، React، Next.js و توسعه اپلیکیشن‌های موبایل فعالیت دارد. او بنیان‌گذار برند IamDev است و در زمینه‌ی طراحی سامانه‌ها و پرتال‌های ماژولار تجربه دارد.",
+  subtitle:"",
   language: "fa-ir",
   company: "IamDev",
   theme: "system", // system, dark or light
+  bodyTitle: "من یک برنامه نویس هستم",
+  bodyDescription:"تمرکز اصلی من بر طراحی سیستم‌های ماژولار، پایدار و با کارایی بالا است که بتوانند مشکلات واقعی کاربران را حل کنند.",
+  subtitle:"توسعه وب، موبایل و سیستم‌های هوشمند با IamDev",
+  herotext:"ساخت نرم‌افزارهایی با معماری تمیز و کارایی بالا",
+
   avatar:
-    "https://avatars.githubusercontent.com/u/00000000?v=4", // لینک عکس پروفایل گیت‌هابت رو بده تا جایگزین کنم
+    "https://avatars.githubusercontent.com/u/5147479?v=4", // لینک عکس پروفایل گیت‌هابت رو بده تا جایگزین کنم
   siteUrl: "https://iamdev.ir",
   siteRepo: "https://github.com/mostafa-rasouli/iamdev",
   siteLogo: "/static/images/logo.png",
