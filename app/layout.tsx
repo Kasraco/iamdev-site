@@ -69,10 +69,11 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const defaultDir = "rtl";
   const {flagNumber: bgFlagNumber} = await bgStylesConfigs();
   return (
     <html
-      lang={siteMetadata.language}
+      lang={siteMetadata.language} dir={defaultDir}
       className={`${plus.variable} scroll-smooth`}
       suppressHydrationWarning
     >
