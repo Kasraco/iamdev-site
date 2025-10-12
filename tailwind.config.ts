@@ -116,6 +116,7 @@ const config: Config = {
     require("@tailwindcss/forms"),
     require("@tailwindcss/typography"),
     require("tailwindcss-animate"),
+    require("tailwindcss-rtl"), // RTL: خودکار آینه‌سازی کلاس‌های جهت‌دار
   ],
 };
 export default config;
