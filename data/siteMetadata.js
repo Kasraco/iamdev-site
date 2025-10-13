@@ -17,20 +17,20 @@ const siteMetadata = {
   avatar:
     "https://avatars.githubusercontent.com/u/5147479?v=4", // لینک عکس پروفایل گیت‌هابت رو بده تا جایگزین کنم
   siteUrl: "https://iamdev.ir",
-  siteRepo: "https://github.com/mostafa-rasouli/iamdev",
+  siteRepo: "https://github.com/Kasraco",
   siteLogo: "/static/images/logo.png",
   socialBanner: "/static/images/twitter-card.png",
 
   email: "info@iamdev.ir",
-  github: "https://github.com/mostafa-rasouli",
-  gitlab: "https://gitlab.com/mostafa-rasouli",
+  github: "https://github.com/Kasraco",
+  gitlab: "https://gitlab.com/Kasraco",
   twitter: "https://x.com/iamdev_ir",
-  facebook: "https://facebook.com/iamdev.ir",
+  facebook: "https://facebook.com/Kasraco",
   youtube: "https://youtube.com/@iamdev",
   linkedin: "https://www.linkedin.com/in/mostafa-rasouli/",
-  instagram: "https://www.instagram.com/iamdev.ir",
-  freelancer: "https://www.freelancer.com/u/mostafa-rasouli",
-  upwork: "https://www.upwork.com/freelancers/~mostafa-rasouli",
+  instagram: "https://www.instagram.com/Kasraco",
+  freelancer: "https://www.freelancer.com/u/Kasraco",
+  upwork: "https://www.upwork.com/freelancers/~Kasraco",
   locale: "fa-IR",
 
   analytics: {
@@ -84,31 +84,7 @@ module.exports = siteMetadata;
 
 /*
 const siteMetadata = {
-  title: 'Tai\'s profile | Software Engineer',
-  author: 'taitrd',
-  name: 'Tai Tran Dinh',
-  headerTitle: 'Tai D. Tran',
-  description: 'Tai is a Software Engineer in Vietnam. He works on weekdays and loves developing his side projects at night and on weekends. He is looking for a good job with potential and a professional process.', language: 'en-us',
-  language: 'en-us',
-  company: 'Freelancer',
-  theme: 'system', // system, dark or light
-  avatar: 'https://avatars.githubusercontent.com/u/16987286?s=400&u=1eafe9c3f9a19aed10325177e4c723290cd3b2c5&v=4',
-  siteUrl: 'https://taitrd.com',
-  siteRepo: 'https://github.com/taitrd/taitrd',
-  siteLogo: '/static/images/logo.png',
-  socialBanner: '/static/images/twitter-card.png',
-  mastodon: 'https://mastodon.social/@mastodonuser',
-  email: 'taitrd49@gmail.com',
-  github: 'https://github.com/taitrd',
-  gitlab: 'https://gitlab.com/taitrd',
-  twitter: 'https://x.com/taitrd92',
-  facebook: 'https://facebook.com',
-  youtube: 'https://youtube.com',
-  linkedin: 'https://www.linkedin.com/in/tai-tran-0b68a9187/',
-  threads: 'https://www.threads.net/@taitran.bl',
-  instagram: 'https://www.instagram.com',
-  freelancer: 'https://www.freelancer.com/hireme/nhotsodeep',
-  upwork: 'https://www.upwork.com/freelancers/~0187d81af70696e97e',
+
   locale: 'en-US',
   analytics: {
     // If you want to use an analytics provider you have to add it to the
