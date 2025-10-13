@@ -1,5 +1,5 @@
 const siteMetadata = {
-  title: "مصطفی رسولی | برنامه‌نویس فول‌استک و طراح نرم‌افزار",
+  title: "طراحی سایت و اپلیکیشن حرفه‌ای با iamdev ",
   author: "mostafa-rasouli",
   name: "مصطفی رسولی",
   headerTitle: "IamDev",

@@ -77,7 +77,7 @@ To get started with iamdev-site, follow these steps:
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/yourusername/iamdev-site.git
+   git clone https://github.com/Kasraco/iamdev-site.git
    ```
 
 2. **Navigate to the project directory**:
