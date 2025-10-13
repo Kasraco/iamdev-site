@@ -1,4 +1,4 @@
-  'use client';
+'use client';
 import { fadeInRight } from "@/lib/motion/variants";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import dynamic from "next/dynamic";
@@ -18,18 +18,17 @@ const LifelongLearnerCard = () => {
     }} >
       <Card className="shadow-lg border-0 bg-white/80 dark:bg-slate-700 backdrop-blur-sm">
         <CardHeader>
-          <CardTitle>Lifelong Learner</CardTitle>
+          <CardTitle>یادگیری مداوم، رشد بی‌وقفه</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="space-y-4 text-zinc-600 dark:text-zinc-300">
             <p>
-              {"I'm"} naturally curious and an explorer at heart, always eager for
-              new challenges and enthusiastic about learning & building things -
-              both tech and non-tech.
+              در تیم IamDev، ما همیشه در مسیر رشد و یادگیری هستیم.
+              هر تجربه برای ما فرصتی است برای کشف فناوری‌های نو، ارتقای مهارت‌ها و خلق راه‌حل‌های هوشمندانه‌تر.
+
             </p>
             <p>
-              Able to grasp new concepts quickly, I remain humble, teachable and
-              open, fully aware {"there's"} always more to discover.
+              با ترکیب دانش، خلاقیت و تجربه، تلاش می‌کنیم در هر پروژه بهترین نسخه از خودمان باشیم.
             </p>
           </div>
         </CardContent>
