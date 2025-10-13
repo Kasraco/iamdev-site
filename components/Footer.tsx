@@ -29,9 +29,7 @@ export default function Footer() {
           <Link href="/">{siteMetadata.title}</Link>
         </div>
         <div className="mb-8 text-sm text-black dark:text-gray-400">
-          <Link href="https://github.com/timlrx/tailwind-nextjs-starter-blog">
-            #source
-          </Link>
+          
         </div>
       </div>
     </motion.footer>
