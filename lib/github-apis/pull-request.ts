@@ -12,7 +12,7 @@ const PullRequestAPI = () => {
         const { data: pulls, url } = await client.request(
           "GET /repos/{owner}/{repo}/pulls",
           {
-            owner: GITHUB_USERNAME || "john",
+            owner: GITHUB_USERNAME || "Kasraco",
             repo: repo.name,
             headers: {},
             state: "all",
