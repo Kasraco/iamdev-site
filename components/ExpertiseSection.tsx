@@ -10,7 +10,7 @@ import { expertiseData } from "@/data/expertiseData";
 const MotionBlock = dynamic(() => import("./motions/Block"));
 
 export default function ExpertiseSection() {
-  const {title, expertisItems}=expertiseData;
+  const { title,items }=expertiseData[0];
 
   return (
     <MotionBlock variants={{
@@ -28,10 +28,10 @@ export default function ExpertiseSection() {
           <div className="flex flex-col sm:flex-row gap-4">
             <div className="space-y-3 sm:w-4/12">
               <h3 className="text-nowrap">{title}</h3>
-              {expertisItems.map((item) => (
+              {items.map((item) => (
                 <div key={item} className="flex items-center space-x-2">
                   <Check className="w-5 h-5 text-green-500 dark:text-green-400" />
-                  <span className="font-mono text-sm">{item}</span>
+                  <span className=" text-sm">{item}</span>
                 </div>
               ))}
             </div>
