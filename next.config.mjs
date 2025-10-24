@@ -17,14 +17,13 @@ const nextConfig = {
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
 
   // Turbopack تنظیم پیش‌فرض
-  experimental: {
-    turbo: {
-      rules: {
-        // پشتیبانی از mdx برای Turbopack
-        '*.mdx': ['@mdx-js/loader'],
-      },
-    },
+turbopack: {
+  rules: {
+    // پشتیبانی از mdx برای Turbopack
+    '*.mdx': ['@mdx-js/loader'],
   },
+},
+
 
   distDir: process.env.NODE_ENV == "development" ? ".dev" : ".next",
   reactStrictMode: false,
