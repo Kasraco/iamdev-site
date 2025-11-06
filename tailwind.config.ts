@@ -99,6 +99,16 @@ const config: Config = {
             },
             code: {
               color: theme("colors.indigo.500"),
+              textAlign: "left",
+              direction: "ltr",
+            },
+            pre: {
+              textAlign: "left",
+              direction: "ltr",
+              code: {
+                textAlign: "left",
+                direction: "ltr",
+              },
             },
           },
         },
@@ -119,6 +129,18 @@ const config: Config = {
             "h1,h2,h3": { fontFamily: theme("fontFamily.shabnam").join(",") },
             "h1,h2,h3,h4,h5,h6": {
               color: theme("colors.gray.100"),
+            },
+            code: {
+              textAlign: "left",
+              direction: "ltr",
+            },
+            pre: {
+              textAlign: "left",
+              direction: "ltr",
+              code: {
+                textAlign: "left",
+                direction: "ltr",
+              },
             },
           },
         },
