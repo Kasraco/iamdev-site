@@ -1,6 +1,8 @@
 import { readdir } from 'node:fs/promises';
 import path from 'node:path';
-const getBlogs = async () => {
+import { cache } from 'react';
+
+const getBlogs = cache(async () => {
     try {
         const filePath = path.resolve(process.cwd(), 'data', 'blog');
         const fileNames = await readdir(filePath, { recursive: true });
@@ -20,8 +22,8 @@ const getBlogs = async () => {
                         slug: fileName,
                         path: `blog/${fileName}`,
                         file_path: `blog/${file}`,
-                        file,
                         ...frontmatter,
+                        file,
                     },
                 })    
             } catch (error) {
@@ -34,5 +36,6 @@ const getBlogs = async () => {
         console.error(err);
     }
     return [];
-}
+});
+
 export default (await getBlogs());
