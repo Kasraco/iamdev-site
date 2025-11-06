@@ -4,7 +4,6 @@ import PostLayout from '@layouts/PostLayout'
 import PostBanner from '@layouts/PostBanner'
 import siteMetadata from '@data/siteMetadata'
 import { notFound } from 'next/navigation'
-import { useMDXComponents } from 'mdx-components'
 import MDXLayoutRenderer from '@components/MDXLayoutRenderer'
 import blogs from '@data/blogs'
 import { Metadata } from 'next'
@@ -77,8 +76,6 @@ export function generateStaticParams() {
 }
 export default async function Page(props: { params: Promise<{ slug: string[] }> }) {
   const params = await props.params;
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const { components } = useMDXComponents({ components: {} as any });
   const slug = decodeURI(params.slug.join('/'))
   // Filter out drafts in production
   const sortedCoreContents = allBlogs
@@ -91,19 +88,26 @@ export default async function Page(props: { params: Promise<{ slug: string[] }> 
   const prev = sortedCoreContents[postIndex + 1]
   const next = sortedCoreContents[postIndex - 1]
   const post = allBlogs.find((p) => p.slug === slug)
+  if (!post) {
+    return notFound()
+  }
   const authorList = post?.authors || ['default']
   const authorDetails = authorList.map((author: any) => {
     const authorResults = allAuthors.find((p) => p.slug === author)
     return authorResults || {}
   })
   const mainContent = post
-  const jsonLd = post.structuredData
+  const jsonLd = post.structuredData || {}
   jsonLd['author'] = authorDetails.map((author: any) => {
     return {
       '@type': 'Person',
       name: author?.name,
     }
   })
+  
+  // تعیین path برای MDX
+  const mdxPath = post.file || (post.file_path ? post.file_path.replace('blog/', '') : null) || `${post.slug}.mdx`
+  
   const Layout = layouts[defaultLayout]
   return (
     <>
@@ -112,7 +116,7 @@ export default async function Page(props: { params: Promise<{ slug: string[] }> 
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <Layout content={mainContent} authorDetails={authorDetails} next={next} prev={prev}>
-        <MDXLayoutRenderer code={post.body.code} components={components} toc={post.toc} path={post.file}/>
+        <MDXLayoutRenderer code={post.body?.code} toc={post.toc} path={mdxPath}/>
       </Layout>
     </>
   )
