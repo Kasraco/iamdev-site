@@ -1,30 +1,30 @@
 ---
-title: Introducing Multi-part Posts with Nested Routing
+title: معرفی پست‌های چند قسمتی با مسیریابی تو در تو
 date: '2021-05-02'
 tags: ['multi-author', 'nextjs', 'feature']
 draft: false
-summary: 'The blog template supports posts in nested sub-folders. This can be used to group posts of similar content e.g. a multi-part course. This post is itself an example of a nested route!'
+summary: 'قالب بلاگ از پست‌ها در پوشه‌های فرعی تو در تو پشتیبانی می‌کند. این می‌تواند برای گروه‌بندی پست‌های محتوای مشابه استفاده شود، به عنوان مثال یک دوره چند قسمتی. این پست خود نمونه‌ای از یک مسیر تو در تو است!'
 ---
 
-# Nested Routes
+# مسیرهای تو در تو
 
-The blog template supports posts in nested sub-folders. This helps in organisation and can be used to group posts of similar content e.g. a multi-part series. This post is itself an example of a nested route! It's located in the `/data/blog/nested-route` folder.
+قالب بلاگ از پست‌ها در پوشه‌های فرعی تو در تو پشتیبانی می‌کند. این به سازماندهی کمک می‌کند و می‌تواند برای گروه‌بندی پست‌های محتوای مشابه استفاده شود، به عنوان مثال یک سری چند قسمتی. این پست خود نمونه‌ای از یک مسیر تو در تو است! در پوشه `/data/blog/nested-route` قرار دارد.
 
-## How
+## چگونه
 
-Simplify create multiple folders inside the main `/data/blog` folder and add your `.md`/`.mdx` files to them. You can even create something like `/data/blog/nested-route/deeply-nested-route/my-post.md`
+به سادگی چندین پوشه در داخل پوشه اصلی `/data/blog` ایجاد کنید و فایل‌های `.md`/`.mdx` خود را به آن‌ها اضافه کنید. حتی می‌توانید چیزی مانند `/data/blog/nested-route/deeply-nested-route/my-post.md` ایجاد کنید
 
-We use Next.js catch all routes to handle the routing and path creations.
+ما از مسیرهای catch all در Next.js برای مدیریت مسیریابی و ایجاد مسیر استفاده می‌کنیم.
 
-## Use Cases
+## موارد استفاده
 
-Here are some reasons to use nested routes
+در اینجا دلایلی برای استفاده از مسیرهای تو در تو آورده شده است
 
-- More logical content organisation (blogs will still be displayed based on the created date)
-- Multi-part posts
-- Different sub-routes for each author
-- Internationalization (though it would be recommended to use [Next.js built-in i8n routing](https://nextjs.org/docs/advanced-features/i18n-routing))
+- سازماندهی منطقی‌تر محتوا (بلاگ‌ها همچنان بر اساس تاریخ ایجاد نمایش داده می‌شوند)
+- پست‌های چند قسمتی
+- مسیرهای فرعی مختلف برای هر نویسنده
+- بین‌المللی‌سازی (اگرچه توصیه می‌شود از [مسیریابی i8n داخلی Next.js](https://nextjs.org/docs/advanced-features/i18n-routing) استفاده کنید)
 
-## Note
+## یادداشت
 
-- The previous/next post links at bottom of the template are currently sorted by date. One could explore modifying the template to refer the reader to the previous/next post in the series, rather than by date.
+- لینک‌های پست قبلی/بعدی در پایین قالب در حال حاضر بر اساس تاریخ مرتب شده‌اند. می‌توانید بررسی کنید که قالب را تغییر دهید تا خواننده را به پست قبلی/بعدی در سری ارجاع دهد، نه بر اساس تاریخ.

@@ -1,27 +1,27 @@
 ---
-title: Debug with browser DevTools in Server-side Node.js
+title: دیباگ با DevTools مرورگر در Node.js سمت سرور
 name: debug-with-browser-dev-tool-in-nodejs
 date: '2024-12-28'
 tags: ['node.js', 'debugger', 'server-side', 'next.js']
 draft: false
 layout: PostBanner
 images: ['/static/images/debug-in-nodejs.png']
-summary: The scenic lands of Canada featuring maple leaves, snow-capped mountains, turquoise lakes and Toronto. Take in the sights in this photo gallery exhibition and see how easy it is to replicate with some MDX magic and tailwind classes.
+summary: مراحل آسان برای استفاده از دیباگر که ممکن است ندانید. مثال زیر را با Next.js و Chrome DevTools ببینید.
 ---
 
-Easy steps so we can use debugger that you may not know. See below example with `Next.js`, chrome DevTools:
+مراحل آسان برای استفاده از دیباگر که ممکن است ندانید. مثال زیر را با `Next.js` و Chrome DevTools ببینید:
 
 ---
 
-# Steps
+# مراحل
 
-Run this script, we can run development with debugger attached.
+این اسکریپت را اجرا کنید، می‌توانیم development را با دیباگر متصل اجرا کنیم.
 
 ```bash
 NODE_OPTIONS='--inspect' next dev
 ```
 
-You will see these outputs:
+این خروجی‌ها را خواهید دید:
 
 ```bash
 Debugger listening on ws://127.0.0.1:9229/e8290eb3-2965-4718-8fb9-d47b56c94b5c
@@ -38,7 +38,7 @@ For help, see: https://nodejs.org/en/docs/inspector
  ✓ Compiled /api/contributions in 1053ms (804 modules)
 ```
 
-In your browser, open `DevTools` in chrome or microsoft edge, you will see this.
+در مرورگر خود، `DevTools` را در Chrome یا Microsoft Edge باز کنید، این را خواهید دید.
 
 <div className="-mx-2 flex flex-wrap overflow-hidden xl:-mx-2">
   <div className="my-1 w-full overflow-hidden px-2 xl:my-1 xl:w-1/2 xl:px-2">
@@ -46,15 +46,15 @@ In your browser, open `DevTools` in chrome or microsoft edge, you will see this.
   </div>
 </div>
 
-Just add a breakpoint or put `debugger` on any line.
+فقط یک breakpoint اضافه کنید یا `debugger` را در هر خطی قرار دهید.
 
-Start to run something with server actions. In my example, i went to my home page with api route running.
+شروع به اجرای چیزی با server actions کنید. در مثال من، به صفحه اصلی رفتم با api route در حال اجرا.
 
-### Reference links you may need to know more.
+### لینک‌های مرجع که ممکن است نیاز داشته باشید بیشتر بدانید.
 
 <div>
-  Reach out with Steve's video [Debugging in Node.js is SO much better with this one trick](https://www.youtube.com/watch?v=i9hOCvBDMMg&pp=ygUPI2pzY29uc29sZXRyaWNr&themeRefresh=1)
+  با ویدیوی استیو تماس بگیرید [Debugging in Node.js is SO much better with this one trick](https://www.youtube.com/watch?v=i9hOCvBDMMg&pp=ygUPI2pzY29uc29sZXRyaWNr&themeRefresh=1)
 </div>
 <div>
-  Read more in Next.js original docs [Debugging with Browser DevTools](https://nextjs.org/docs/app/building-your-application/configuring/debugging)
+  بیشتر بخوانید در مستندات اصلی Next.js [Debugging with Browser DevTools](https://nextjs.org/docs/app/building-your-application/configuring/debugging)
 </div>
