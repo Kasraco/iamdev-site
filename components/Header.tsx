@@ -31,7 +31,7 @@ const Header = () => {
       </motion.div>
       <div className="flex items-center space-x-4 leading-5 sm:space-x-6">
         {headerNavLinks
-          .filter((link) => link.href !== "/")
+          // .filter((link) => link.href !== "/")
           .map((link, key) => (
             <Button key={key} variant="ghost" asChild className="hover:bg-white/40 dark:hover:bg-white/10 hover:backdrop-blur-none">
               <Link
